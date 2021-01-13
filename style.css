@@ -1,0 +1,63 @@
+body {
+    font-family: 'Share Tech Mono', monospace;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: #223;
+    background-image: url(images/tex-x2.png);
+    height: 2000px;
+}
+.navbar {
+    background-color: #3349;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.5s;
+}
+.navbar a{
+    color: white;
+}
+.navbar ul {
+    display: flex;
+}
+.navbar ul a {
+    padding: 0 1em;
+    border-right: 1px solid #667;
+}
+.navbar ul li:last-child a {
+    border: none;
+}
+.navbar .toggler {
+    display: none;
+}
+@media (max-width:460px) {
+    body {
+        background-image: url(images/tex-x1.png);
+    }
+    .navbar .toggler {
+        display: block;
+    }
+    .navbar ul {
+        display: none;
+    }
+    .navbar:target ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 67px;
+        background-color: #6689;
+    }
+    .navbar:target ul a {
+        display: block;
+        padding: 1em;
+        border-bottom: 1px solid #667;
+    }
+    .navbar.scrolled {
+        /*background-color: #334;*/
+        background: darkorange;
+    }
+}
